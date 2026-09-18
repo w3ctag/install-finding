@@ -1,0 +1,21 @@
+<pre class='metadata'>
+Title: Your Spec Title
+Shortname: your-spec
+Level: None
+Status: DRAFT-FINDING
+Group: TAG
+ED: https://w3ctag.github.io/repo-name/
+Repository: w3ctag/repo-name
+Editor: Your Name, Your Company http://example.com/your-company, your-email@example.com, http://example.com/your-personal-website
+Abstract: A short description of your spec, one or two sentences.
+Complain About: accidental-2119 yes, missing-example-ids yes
+Assume Explicit For: on
+Die On: lint
+Markup Shorthands: markdown yes, css no
+Boilerplate: conformance no
+</pre>
+
+Introduction {#intro}
+=====================
+
+Introduction here.

@@ -83,6 +83,13 @@ The exact UI is left to user agents.
 A stable and obvious affordance also benefits website authors.
 They have repeatedly reported that updating their install instructions after a new browser or operating system release is tedious.
 
+## No Capability Gating ## {#no-capability-gating}
+
+We expect user agents not to gate web features on installation, unless the feature requires the website to be registered with the operating system.
+
+<div class="example" id="capability-examples">
+[File handlers](https://wicg.github.io/manifest-incubations/#file_handlers-member) (see [[MANIFEST-INCUBATIONS]]) or the Badging API (see [[BADGING]]) naturally require an app identity or icon to be registered with the operating system.
+</div>
 
 The role of programmatic install APIs {#programmatic-install-apis}
 ==================================================================

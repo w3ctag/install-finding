@@ -1,13 +1,13 @@
 <pre class='metadata'>
-Title: Your Spec Title
-Shortname: your-spec
+Title: Installing Websites Must Be Easy
+Shortname: install-finding
 Level: None
 Status: DRAFT-FINDING
 Group: TAG
-ED: https://w3ctag.github.io/repo-name/
-Repository: w3ctag/repo-name
-Editor: Your Name, Your Company http://example.com/your-company, your-email@example.com, http://example.com/your-personal-website
-Abstract: A short description of your spec, one or two sentences.
+ED: https://w3ctag.github.io/install-finding/
+Repository: w3ctag/install-finding
+Editor: Christian Liebel, Thinktecture AG https://thinktecture.com, christian.liebel@thinktecture.com, https://christianliebel.com
+Abstract: Website installation has long become a core part of the web. We expect user agents and operating system providers to make installing websites as easy as possible.
 Complain About: accidental-2119 yes, missing-example-ids yes
 Assume Explicit For: on
 Die On: lint
@@ -15,7 +15,63 @@ Markup Shorthands: markdown yes, css no
 Boilerplate: conformance no
 </pre>
 
+<pre class=biblio>
+{
+  "INSTALLABLE-WEBAPPS": {
+    "title": "Use Cases and Requirements for Installable Web Apps",
+    "href": "https://w3c-webmob.github.io/installable-webapps/",
+    "authors": ["Marcos Cáceres", "Ernesto Jiménez"],
+    "publisher": "W3C Web and Mobile Interest Group (WebMob)",
+    "status": "Unofficial Draft",
+    "date": "10 November 2016"
+  }
+}
+</pre>
+
 Introduction {#intro}
 =====================
 
-Introduction here.
+Websites have been installable on various platforms for well over a decade.
+When installed, a website is added to the home screen, taskbar, dock, or launcher of the operating system, and registered with it.
+When launched, it can appear as a standalone application: in its own window, full-screen, or whichever presentation is customary on the operating system.
+
+From the user's perspective, the process of installing a web app works very differently depending on the browser used, and might not be obvious at all.
+Website authors report that they resort to native apps instead, and regularly ask for programmatic APIs that let them trigger install prompts themselves.
+
+This finding is intended to guide user agent and operating system vendors.
+
+Note: This finding focuses on same-origin installs.
+Cross-origin installs are currently not widely implemented across the platform.
+This topic might be revisited in a future version of this finding.
+
+
+Installation is a core capability of browsers {#core-part-of-browsers}
+======================================================================
+
+Installable websites date back to at least 2008 (see [[INSTALLABLE-WEBAPPS#introduction]]).
+By now, the installation of websites is possible on all relevant engines and operating systems.
+The Web Application Manifest (see [[APPMANIFEST]]), developed since 2013, allows website authors to specify metadata for installable web applications.
+
+Installed websites fulfill a user need that otherwise can only be addressed by native apps: a persistent presence on the device, and launching from the same place as other applications.
+Unlike native apps, they do so while staying within the web's security and privacy model, including its permission model and sandbox.
+
+Given well over a decade of implementation experience and standardization, we declare the installation of websites a core capability of general-purpose browsers, and we expect browsers to offer it.
+
+NOTE: Text-mode browsers, kiosks, or web views are not expected to offer install affordances.
+
+
+Expectations on user agent and operating system providers {#expectations-on-providers}
+======================================================================================
+
+In this section, we set out our expectations on user agent and operating system vendors.
+
+## Obvious Install UI ## {#obvious-install-ui}
+
+We expect user agents to make installation an obvious affordance to users.
+Specifically, we expect the install option to clearly name the action, and to be easily reachable from the browser's UI.
+An entry inside a menu with an unrelated label (such as <samp>Share</samp>), or several menu layers deep, does not meet this expectation.
+We also expect users to be informed about what happens when they decide to install a website.
+The exact UI is left to user agents.
+
+A stable and obvious affordance also benefits website authors.
+They have repeatedly reported that updating their install instructions after a new browser or operating system release is tedious.

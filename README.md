@@ -1,3 +1,3 @@
-# Finding Name
+# Installing Websites Must Be Easy
 
-This repository contains a draft finding about [finding topic].
+This repository contains a draft finding about installable websites.

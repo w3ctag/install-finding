@@ -2,13 +2,13 @@
  <head>
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Your Spec Title</title>
+  <title>Installing Websites Must Be Easy</title>
   <meta content="DRAFT-FINDING" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/base.css" rel="stylesheet">
-  <meta content="Bikeshed version ac92c2f0d, updated Fri Aug 21 16:01:29 2026 -0700" name="generator">
-  <link href="https://w3ctag.github.io/repo-name/" rel="canonical">
+  <meta content="Bikeshed version ea4009a02, updated Thu Sep 17 15:24:44 2026 -0700" name="generator">
+  <link href="https://w3ctag.github.io/install-finding/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="bde8005bad6bae1d2373ae2498db8ebb328f6a1c" name="revision">
+  <meta content="7e0e4713e4a39bfab2fade9cc37bf2bae96692df" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -422,19 +422,19 @@ dfn > a.self-link::before      { content: "#"; }
     <img alt="W3C" height="48" src="https://www.w3.org/StyleSheets/TR/2021/logos/W3C" width="72">
 </a>
 </p>
-   <h1 class="no-ref p-name" id="title">Your Spec Title</h1>
+   <h1 class="no-ref p-name" id="title">Installing Websites Must Be Easy</h1>
    <p id="w3c-state"><a href="https://tag.w3.org/findings/">Draft Finding of the TAG</a>,
-    <time class="dt-updated" datetime="2026-09-18">18 September 2026</time></p>
+    <time class="dt-updated" datetime="2026-10-05">5 October 2026</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
      <dl>
       <dt>This version:
-      <dd><a class="u-url" href="https://w3ctag.github.io/repo-name/">https://w3ctag.github.io/repo-name/</a>
+      <dd><a class="u-url" href="https://w3ctag.github.io/install-finding/">https://w3ctag.github.io/install-finding/</a>
       <dt>Issue Tracking:
-      <dd><a href="https://github.com/w3ctag/repo-name/issues/">GitHub</a>
+      <dd><a href="https://github.com/w3ctag/install-finding/issues/">GitHub</a>
       <dt class="editor">Editor:
-      <dd class="editor h-card p-author vcard"><a class="fn p-name u-url url" href="http://example.com/your-personal-website">Your Name</a> (<a class="org p-org" href="http://example.com/your-company">Your Company</a>) <a class="email u-email" href="mailto:your-email@example.com">your-email@example.com</a>
+      <dd class="editor h-card p-author vcard"><a class="fn p-name u-url url" href="https://christianliebel.com">Christian Liebel</a> (<a class="org p-org" href="https://thinktecture.com">Thinktecture AG</a>) <a class="email u-email" href="mailto:christian.liebel@thinktecture.com">christian.liebel@thinktecture.com</a>
      </dl>
     </div>
    </details>
@@ -445,7 +445,7 @@ dfn > a.self-link::before      { content: "#"; }
   </div>
   <div class="p-summary" data-fill-with="abstract">
    <h2 class="heading no-num no-ref no-toc settled" id="abstract"><span class="content">Abstract</span></h2>
-   <p>A short description of your spec, one or two sentences.</p>
+   <p>Website installation has long become a core part of the web. We expect user agents and operating system providers to make installing websites as easy as possible.</p>
   </div>
   <h2 class="heading no-num no-ref no-toc settled" id="sotd"><span class="content">Status of this document</span></h2>
   <div data-fill-with="status">
@@ -467,9 +467,9 @@ dfn > a.self-link::before      { content: "#"; }
   </p>
    <p>
     Feedback and comments on this document are welcome. Please
-    <a href="https://github.com/w3ctag/repo-name/issues">file an issue</a>
+    <a href="https://github.com/w3ctag/install-finding/issues">file an issue</a>
     in this document’s
-    <a href="https://github.com/w3ctag/repo-name/">GitHub repository</a>.
+    <a href="https://github.com/w3ctag/install-finding/">GitHub repository</a>.
   </p>
    <p>
     This document is governed by the <a href="https://www.w3.org/policies/process/20250818/" id="w3c_process_revision">18 August 2025 W3C
@@ -481,10 +481,59 @@ dfn > a.self-link::before      { content: "#"; }
    <h2 class="no-num no-ref no-toc" id="contents">Table of Contents</h2>
    <ol class="toc">
     <li><a href="#intro"><span class="secno">1</span> <span class="content">Introduction</span></a>
+    <li><a href="#core-part-of-browsers"><span class="secno">2</span> <span class="content">Installation is a core capability of browsers</span></a>
+    <li>
+     <a href="#expectations-on-providers"><span class="secno">3</span> <span class="content">Expectations on user agent and operating system providers</span></a>
+     <ol class="toc">
+      <li><a href="#obvious-install-ui"><span class="secno">3.1</span> <span class="content">Obvious Install UI</span></a>
+     </ol>
+    <li>
+     <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
+     <ol class="toc">
+      <li><a href="#normative"><span class="secno"></span> <span class="content">Normative References</span></a>
+      <li><a href="#informative"><span class="secno"></span> <span class="content">Non-Normative References</span></a>
+     </ol>
    </ol>
   </nav>
   <main>
    <h2 class="heading settled" data-level="1" id="intro"><span class="secno">1. </span><span class="content">Introduction</span><a class="self-link" href="#intro"></a></h2>
-   <p>Introduction here.</p>
+   <p>Websites have been installable on various platforms for well over a decade.
+When installed, a website is added to the home screen, taskbar, dock, or launcher of the operating system, and registered with it.
+When launched, it can appear as a standalone application: in its own window, full-screen, or whichever presentation is customary on the operating system.</p>
+   <p>From the user’s perspective, the process of installing a web app works very differently depending on the browser used, and might not be obvious at all.
+Website authors report that they resort to native apps instead, and regularly ask for programmatic APIs that let them trigger install prompts themselves.</p>
+   <p>This finding is intended to guide user agent and operating system vendors.</p>
+   <p class="note" role="note"><span class="marker">Note:</span> This finding focuses on same-origin installs.
+Cross-origin installs are currently not widely implemented across the platform.
+This topic might be revisited in a future version of this finding.</p>
+   <h2 class="heading settled" data-level="2" id="core-part-of-browsers"><span class="secno">2. </span><span class="content">Installation is a core capability of browsers</span><a class="self-link" href="#core-part-of-browsers"></a></h2>
+   <p>Installable websites date back to at least 2008 (see <a href="https://w3c-webmob.github.io/installable-webapps/#introduction">Use Cases and Requirements for Installable Web Apps § introduction</a>).
+By now, the installation of websites is possible on all relevant engines and operating systems.
+The Web Application Manifest (see <a data-link-type="biblio" href="#biblio-appmanifest" title="Web Application Manifest">[APPMANIFEST]</a>), developed since 2013, allows website authors to specify metadata for installable web applications.</p>
+   <p>Installed websites fulfill a user need that otherwise can only be addressed by native apps: a persistent presence on the device, and launching from the same place as other applications.
+Unlike native apps, they do so while staying within the web’s security and privacy model, including its permission model and sandbox.</p>
+   <p>Given well over a decade of implementation experience and standardization, we declare the installation of websites a core capability of general-purpose browsers, and we expect browsers to offer it.</p>
+   <p class="note" role="note"><span class="marker">NOTE:</span> Text-mode browsers, kiosks, or web views are not expected to offer install affordances.</p>
+   <h2 class="heading settled" data-level="3" id="expectations-on-providers"><span class="secno">3. </span><span class="content">Expectations on user agent and operating system providers</span><a class="self-link" href="#expectations-on-providers"></a></h2>
+   <p>In this section, we set out our expectations on user agent and operating system vendors.</p>
+   <h3 class="heading settled" data-level="3.1" id="obvious-install-ui"><span class="secno">3.1. </span><span class="content">Obvious Install UI</span><a class="self-link" href="#obvious-install-ui"></a></h3>
+   <p>We expect user agents to make installation an obvious affordance to users.
+Specifically, we expect the install option to clearly name the action, and to be easily reachable from the browser’s UI.
+An entry inside a menu with an unrelated label (such as <samp>Share</samp>), or several menu layers deep, does not meet this expectation.
+We also expect users to be informed about what happens when they decide to install a website.
+The exact UI is left to user agents.</p>
+   <p>A stable and obvious affordance also benefits website authors.
+They have repeatedly reported that updating their install instructions after a new browser or operating system release is tedious.</p>
   </main>
   <script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script>
+  <h2 class="heading no-num no-ref settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>
+  <h3 class="heading no-num no-ref settled" id="normative"><span class="content">Normative References</span><a class="self-link" href="#normative"></a></h3>
+  <dl>
+   <dt id="biblio-installable-webapps">[INSTALLABLE-WEBAPPS]
+   <dd>Marcos Cáceres; Ernesto Jiménez. <a href="https://w3c-webmob.github.io/installable-webapps/"><cite>Use Cases and Requirements for Installable Web Apps</cite></a>. 10 November 2016. Unofficial Draft. URL: <a href="https://w3c-webmob.github.io/installable-webapps/">https://w3c-webmob.github.io/installable-webapps/</a>
+  </dl>
+  <h3 class="heading no-num no-ref settled" id="informative"><span class="content">Non-Normative References</span><a class="self-link" href="#informative"></a></h3>
+  <dl>
+   <dt id="biblio-appmanifest">[APPMANIFEST]
+   <dd>Marcos Caceres; Daniel Murphy; Christian Liebel. <a href="https://w3c.github.io/manifest/"><cite>Web Application Manifest</cite></a>. URL: <a href="https://w3c.github.io/manifest/">https://w3c.github.io/manifest/</a>
+  </dl>

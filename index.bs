@@ -75,3 +75,14 @@ The exact UI is left to user agents.
 
 A stable and obvious affordance also benefits website authors.
 They have repeatedly reported that updating their install instructions after a new browser or operating system release is tedious.
+
+
+The role of programmatic install APIs {#programmatic-install-apis}
+==================================================================
+
+Website authors have repeatedly asked for an API that lets them trigger the browser's install flow themselves, partly because the browser's own install affordance is sometimes hard to find.
+A programmatic API would allow site authors to propose installing at a meaningful moment of the user journey.
+The TAG has reviewed several proposals for such an API, both [same-origin](https://github.com/w3ctag/design-reviews/issues/888) and [cross-origin](https://github.com/w3ctag/design-reviews/issues/946), most recently the [manifest-first Web Install API](https://github.com/w3ctag/design-reviews/issues/1245).
+
+We [encourage vendors](https://github.com/w3ctag/design-reviews/issues/888#issuecomment-2316801231) to explore same-origin programmatic install APIs, as long as they trigger the user agent's own install flow, with the user agent retaining control over timing, eligibility, and abuse mitigation.
+Such an API complements, but does not replace, the expectations in [[#obvious-install-ui]].

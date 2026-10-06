@@ -24,6 +24,13 @@ Boilerplate: conformance no
     "publisher": "W3C Web and Mobile Interest Group (WebMob)",
     "status": "Unofficial Draft",
     "date": "10 November 2016"
+  },
+  "CHROME-INSTALL-TELEMETRY": {
+    "title": "Comment on the WebKit standards position for BeforeInstallPromptEvent: usage of installed PWAs and click-through rate of Chrome's install UI",
+    "href": "https://github.com/WebKit/standards-positions/issues/619#issuecomment-5625310796",
+    "authors": ["Daniel Murphy"],
+    "publisher": "GitHub",
+    "date": "10 September 2026"
   }
 }
 </pre>
@@ -35,7 +42,7 @@ Websites have been installable on various platforms for well over a decade.
 When installed, a website is added to the home screen, taskbar, dock, or launcher of the operating system, and registered with it.
 When launched, it can appear as a standalone application: in its own window, full-screen, or whichever presentation is customary on the operating system.
 
-From the user's perspective, the process of installing a web app works very differently depending on the browser used, and might not be obvious at all.
+From the user's perspective, the process of installing a website works very differently depending on the browser used, and might not be obvious at all.
 Website authors report that they resort to native apps instead, and regularly ask for programmatic APIs that let them trigger install prompts themselves.
 
 This finding is intended to guide user agent and operating system vendors.
@@ -80,9 +87,16 @@ They have repeatedly reported that updating their install instructions after a n
 The role of programmatic install APIs {#programmatic-install-apis}
 ==================================================================
 
-Website authors have repeatedly asked for an API that lets them trigger the browser's install flow themselves, partly because the browser's own install affordance is sometimes hard to find.
-A programmatic API would allow site authors to propose installing at a meaningful moment of the user journey.
-The TAG has reviewed several proposals for such an API, both [same-origin](https://github.com/w3ctag/design-reviews/issues/888) and [cross-origin](https://github.com/w3ctag/design-reviews/issues/946), most recently the [manifest-first Web Install API](https://github.com/w3ctag/design-reviews/issues/1245).
+Users often do not know that their browser can install websites, and browsers often do not know the appropriate time to inform them (see [[CHROME-INSTALL-TELEMETRY]]).
+Websites have more information about whether visitors are likely to want to install the site and when a good time is to educate those visitors. However, websites also have incentives to nag users.
 
+Website authors repeatedly ask for an API that lets them trigger the browser's install flow themselves.
+Chromium-based browsers have exposed such an API since 2015, the [`beforeinstallprompt`](https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeinstallprompt_event) event (see [[MANIFEST-INCUBATIONS]]).
+Its design stems from a time when browsers prompted users spontaneously, and when installation was subject to meeting certain criteria, such as the presence of a service worker.
+Since then, browsers have found that users do not want these spontaneous prompts, and only show them after the website has asked for them.
+The Web Applications Working Group has found consensus that installation should not depend on install criteria, but that [any website is an installable web application](https://www.w3.org/TR/appmanifest/#installable-web-applications).
+What remains is a browser-sent event that provides a handle to trigger the install prompt, which is a rather unusual design.
+
+The TAG has reviewed several proposals for new programmatic install APIs, both [same-origin](https://github.com/w3ctag/design-reviews/issues/888) and [cross-origin](https://github.com/w3ctag/design-reviews/issues/946), most recently the [manifest-first Web Install API](https://github.com/w3ctag/design-reviews/issues/1245).
 We [encourage vendors](https://github.com/w3ctag/design-reviews/issues/888#issuecomment-2316801231) to explore same-origin programmatic install APIs, as long as they trigger the user agent's own install flow, with the user agent retaining control over timing, eligibility, and abuse mitigation.
 Providing such an API does not relieve a user agent from following the expectations in [[#obvious-install-ui]].

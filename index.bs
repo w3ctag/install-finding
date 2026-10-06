@@ -55,9 +55,9 @@ The Web Application Manifest (see [[APPMANIFEST]]), developed since 2013, allows
 Installed websites fulfill a user need that otherwise can only be addressed by native apps: a persistent presence on the device, and launching from the same place as other applications.
 Unlike native apps, they do so while staying within the web's security and privacy model, including its permission model and sandbox.
 
-Given well over a decade of implementation experience and standardization, we declare the installation of websites a core capability of general-purpose browsers, and we expect browsers to offer it.
+Given well over a decade of implementation experience and standardization, we declare the installation of websites a core capability of general-purpose browsers, and we expect them to offer it.
 
-NOTE: Text-mode browsers, kiosks, or web views are not expected to offer install affordances.
+NOTE: This expectation does not extend to specialized user agents, such as text-mode browsers, kiosks, or web views embedded in applications, although they may still choose to offer installation.
 
 
 Expectations on user agent and operating system providers {#expectations-on-providers}

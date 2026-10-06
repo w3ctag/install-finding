@@ -85,4 +85,4 @@ A programmatic API would allow site authors to propose installing at a meaningfu
 The TAG has reviewed several proposals for such an API, both [same-origin](https://github.com/w3ctag/design-reviews/issues/888) and [cross-origin](https://github.com/w3ctag/design-reviews/issues/946), most recently the [manifest-first Web Install API](https://github.com/w3ctag/design-reviews/issues/1245).
 
 We [encourage vendors](https://github.com/w3ctag/design-reviews/issues/888#issuecomment-2316801231) to explore same-origin programmatic install APIs, as long as they trigger the user agent's own install flow, with the user agent retaining control over timing, eligibility, and abuse mitigation.
-Such an API complements, but does not replace, the expectations in [[#obvious-install-ui]].
+Providing such an API does not relieve a user agent from following the expectations in [[#obvious-install-ui]].

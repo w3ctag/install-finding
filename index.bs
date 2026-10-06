@@ -93,8 +93,16 @@ The exceptions are features that
 
 Even the second should only motivate exceptions when there's no other clear way for users to manage that option beyond uninstalling the website.
 
-<div class="example" id="capability-examples">
-[File handlers](https://wicg.github.io/manifest-incubations/#file_handlers-member) (see [[MANIFEST-INCUBATIONS]]) or the Badging API (see [[BADGING]]) naturally require an app identity or icon to be registered with the operating system.
+<div class="example" id="badging-api-example">
+The Badging API (see [[BADGING]]) is exceptional because it adds a badge to the application's icon and therefore requires an icon to be present (first exception).
+</div>
+
+<div class="example" id="file-handling-api-example">
+The [File Handling API](https://wicg.github.io/manifest-incubations/#file_handlers-member) (see [[MANIFEST-INCUBATIONS]]) is exceptional because it requires an app identity registered with the operating system so that it can be selected from the <samp>Open With</samp> list (second exception).
+</div>
+
+<div class="example" id="push-api-example">
+The Push API (see [[PUSH-API]]) is exceptional because some operating systems might register applications allowed to send push notifications in a central surface (second exception). However, it might be just as easy to revoke the permission for push notifications from that surface as to uninstall the website.
 </div>
 
 The role of programmatic install APIs {#programmatic-install-apis}

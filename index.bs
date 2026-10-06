@@ -85,7 +85,13 @@ They have repeatedly reported that updating their install instructions after a n
 
 ## No Capability Gating ## {#no-capability-gating}
 
-We expect user agents not to gate web features on installation, unless the feature requires the website to be registered with the operating system.
+Nearly all web features that are available to installed websites should also be usable by websites that haven't been installed.
+
+The exceptions are features that
+1. control part of the launcher surface to which the website is installed or
+2. add an option somewhere else in the operating system.
+
+Even the second should only motivate exceptions when there's no other clear way for users to manage that option beyond uninstalling the website.
 
 <div class="example" id="capability-examples">
 [File handlers](https://wicg.github.io/manifest-incubations/#file_handlers-member) (see [[MANIFEST-INCUBATIONS]]) or the Badging API (see [[BADGING]]) naturally require an app identity or icon to be registered with the operating system.

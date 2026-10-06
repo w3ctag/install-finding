@@ -88,7 +88,7 @@ They have repeatedly reported that updating their install instructions after a n
 We expect operating system providers to give all user agents the same opportunity to install websites to the home screen, taskbar, dock, or launcher.
 Specifically, we expect third-party browsers to have access to the same install mechanisms as the platform's default browser.
 
-Additionally, we expect operating system providers to launch installed websites using the same browser engine that initiated the installation.
+Additionally, we expect operating system providers to launch installed websites using the same browser that initiated the installation.
 The user agent that performed the installation is the one the user trusted with it, and we expect this trust relationship to persist across launches.
 
 The role of programmatic install APIs {#programmatic-install-apis}

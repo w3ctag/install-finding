@@ -102,7 +102,8 @@ The [File Handling API](https://wicg.github.io/manifest-incubations/#file_handle
 </div>
 
 <div class="example" id="push-api-example">
-The Push API (see [[PUSH-API]]) is exceptional because some operating systems might register applications allowed to send push notifications in a central surface (second exception). However, it might be just as easy to revoke the permission for push notifications from that surface as to uninstall the website.
+The Push API (see [[PUSH-API]]) is exceptional because some operating systems might register applications allowed to send push notifications in a central surface (second exception).
+However, it might be just as easy to revoke the permission for push notifications from that surface as to uninstall the website.
 </div>
 
 The role of programmatic install APIs {#programmatic-install-apis}

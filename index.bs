@@ -64,7 +64,7 @@ Unlike native apps, they do so while staying within the web's security and priva
 
 Given well over a decade of implementation experience and standardization, we declare the installation of websites a core capability of general-purpose browsers, and we expect them to offer it.
 
-NOTE: This expectation does not extend to specialized user agents, such as text-mode browsers, kiosks, or web views embedded in applications, although they may still choose to offer installation.
+NOTE: This expectation does not extend to specialized user agents, such as text-mode browsers, kiosks, or web views embedded in applications, although they can still choose to offer installation.
 
 
 Expectations on user agent and operating system providers {#expectations-on-providers}

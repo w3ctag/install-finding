@@ -8,7 +8,7 @@
   <meta content="Bikeshed version ea4009a02, updated Thu Sep 17 15:24:44 2026 -0700" name="generator">
   <link href="https://w3ctag.github.io/install-finding/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="1e4e48ae235ada0d901bc5b002622364d0e6e238" name="revision">
+  <meta content="63f345dc76f9f959def4a4d7fb3e37fe63331953" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -424,7 +424,7 @@ dfn > a.self-link::before      { content: "#"; }
 </p>
    <h1 class="no-ref p-name" id="title">Installing Websites Must Be Easy</h1>
    <p id="w3c-state"><a href="https://tag.w3.org/findings/">Draft Finding of the TAG</a>,
-    <time class="dt-updated" datetime="2026-10-06">6 October 2026</time></p>
+    <time class="dt-updated" datetime="2026-10-09">9 October 2026</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -514,7 +514,7 @@ The Web Application Manifest (see <a data-link-type="biblio" href="#biblio-appma
    <p>Installed websites fulfill a user need that otherwise can only be addressed by native apps: a persistent presence on the device, and launching from the same place as other applications.
 Unlike native apps, they do so while staying within the web’s security and privacy model, including its permission model and sandbox.</p>
    <p>Given well over a decade of implementation experience and standardization, we declare the installation of websites a core capability of general-purpose browsers, and we expect them to offer it.</p>
-   <p class="note" role="note"><span class="marker">NOTE:</span> This expectation does not extend to specialized user agents, such as text-mode browsers, kiosks, or web views embedded in applications, although they may still choose to offer installation.</p>
+   <p class="note" role="note"><span class="marker">NOTE:</span> This expectation does not extend to specialized user agents, such as text-mode browsers, kiosks, or web views embedded in applications, although they can still choose to offer installation.</p>
    <h2 class="heading settled" data-level="3" id="expectations-on-providers"><span class="secno">3. </span><span class="content">Expectations on user agent and operating system providers</span><a class="self-link" href="#expectations-on-providers"></a></h2>
    <p>In this section, we set out our expectations on user agent and operating system vendors.</p>
    <h3 class="heading settled" data-level="3.1" id="obvious-install-ui"><span class="secno">3.1. </span><span class="content">Obvious Install UI</span><a class="self-link" href="#obvious-install-ui"></a></h3>
@@ -527,7 +527,8 @@ The exact UI is left to user agents.</p>
 They have repeatedly reported that updating their install instructions after a new browser or operating system release is tedious.</p>
    <h2 class="heading settled" data-level="4" id="programmatic-install-apis"><span class="secno">4. </span><span class="content">The role of programmatic install APIs</span><a class="self-link" href="#programmatic-install-apis"></a></h2>
    <p>Users often do not know that their browser can install websites, and browsers often do not know the appropriate time to inform them (see <a data-link-type="biblio" href="#biblio-chrome-install-telemetry" title="Comment on the WebKit standards position for BeforeInstallPromptEvent: usage of installed PWAs and click-through rate of Chrome&apos;s install UI">[CHROME-INSTALL-TELEMETRY]</a>).
-Websites have more information about whether visitors are likely to want to install the site and when a good time is to educate those visitors. However, websites also have incentives to nag users.</p>
+Websites have more information about whether visitors are likely to want to install the site and when a good time is to educate those visitors.
+However, websites also have incentives to nag users.</p>
    <p>Website authors repeatedly ask for an API that lets them trigger the browser’s install flow themselves.
 Chromium-based browsers have exposed such an API since 2015, the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeinstallprompt_event"><code>beforeinstallprompt</code></a> event (see <a data-link-type="biblio" href="#biblio-manifest-incubations" title="Manifest Incubations">[MANIFEST-INCUBATIONS]</a>).
 Its design stems from a time when browsers prompted users spontaneously, and when installation was subject to meeting certain criteria, such as the presence of a service worker.

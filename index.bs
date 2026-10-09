@@ -88,7 +88,8 @@ The role of programmatic install APIs {#programmatic-install-apis}
 ==================================================================
 
 Users often do not know that their browser can install websites, and browsers often do not know the appropriate time to inform them (see [[CHROME-INSTALL-TELEMETRY]]).
-Websites have more information about whether visitors are likely to want to install the site and when a good time is to educate those visitors. However, websites also have incentives to nag users.
+Websites have more information about whether visitors are likely to want to install the site and when a good time is to educate those visitors.
+However, websites also have incentives to nag users.
 
 Website authors repeatedly ask for an API that lets them trigger the browser's install flow themselves.
 Chromium-based browsers have exposed such an API since 2015, the [`beforeinstallprompt`](https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeinstallprompt_event) event (see [[MANIFEST-INCUBATIONS]]).

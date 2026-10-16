@@ -8,7 +8,7 @@
   <meta content="Bikeshed version 49e9fdd4f, updated Tue Oct 13 14:27:53 2026 -0700" name="generator">
   <link href="https://w3ctag.github.io/install-finding/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="0c5cd7a453d0ed23ad99d9703b7869d553ffbf8b" name="revision">
+  <meta content="739b4b6619f87721e3e70901115a13a6d43d6e90" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -558,7 +558,7 @@ However, websites also have incentives to nag users.</p>
 Chromium-based browsers have exposed such an API since 2015, the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeinstallprompt_event"><code>beforeinstallprompt</code></a> event (see <a data-link-type="biblio" href="#biblio-manifest-incubations" title="Manifest Incubations">[MANIFEST-INCUBATIONS]</a>).
 Its design stems from a time when browsers prompted users spontaneously, and when installation was subject to meeting certain criteria, such as the presence of a service worker.
 Since then, browsers have found that users do not want these spontaneous prompts, and only show them after the website has asked for them.
-The Web Applications Working Group has found consensus that installation should not depend on install criteria, but that <a href="https://www.w3.org/TR/appmanifest/#installable-web-applications">any website is an installable web application</a>.
+The Web Applications Working Group has consensus that installation should not depend on install criteria. That is, any website is installable.
 What remains is a browser-sent event that provides a handle to trigger the install prompt, which is a rather unusual design.</p>
    <p>The TAG has reviewed several proposals for new programmatic install APIs, both <a href="https://github.com/w3ctag/design-reviews/issues/888">same-origin</a> and <a href="https://github.com/w3ctag/design-reviews/issues/946">cross-origin</a>, most recently the <a href="https://github.com/w3ctag/design-reviews/issues/1245">manifest-first Web Install API</a>.
 We <a href="https://github.com/w3ctag/design-reviews/issues/888#issuecomment-2316801231">encourage vendors</a> to explore same-origin programmatic install APIs, as long as they trigger the user agent’s own install flow, with the user agent retaining control over timing, eligibility, and abuse mitigation.

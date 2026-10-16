@@ -8,7 +8,7 @@
   <meta content="Bikeshed version 49e9fdd4f, updated Tue Oct 13 14:27:53 2026 -0700" name="generator">
   <link href="https://w3ctag.github.io/install-finding/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="7a47ea171ddc95e62a4209b8d81fe413fba09b1f" name="revision">
+  <meta content="0c5cd7a453d0ed23ad99d9703b7869d553ffbf8b" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -424,7 +424,7 @@ dfn > a.self-link::before      { content: "#"; }
 </p>
    <h1 class="no-ref p-name" id="title">Installing Websites Must Be Easy</h1>
    <p id="w3c-state"><a href="https://tag.w3.org/findings/">Draft Finding of the TAG</a>,
-    <time class="dt-updated" datetime="2026-10-14">14 October 2026</time></p>
+    <time class="dt-updated" datetime="2026-10-16">16 October 2026</time></p>
    <details open>
     <summary>More details about this document</summary>
     <div data-fill-with="spec-metadata">
@@ -487,6 +487,7 @@ dfn > a.self-link::before      { content: "#"; }
      <ol class="toc">
       <li><a href="#obvious-install-ui"><span class="secno">3.1</span> <span class="content">Obvious Install UI</span></a>
       <li><a href="#engine-fairness"><span class="secno">3.2</span> <span class="content">Engine Fairness</span></a>
+      <li><a href="#no-capability-gating"><span class="secno">3.3</span> <span class="content">No Capability Gating</span></a>
      </ol>
     <li><a href="#programmatic-install-apis"><span class="secno">4</span> <span class="content">The role of programmatic install APIs</span></a>
     <li>
@@ -532,6 +533,23 @@ Specifically, we expect third-party browsers to have access to the same install 
    <p>Additionally, we expect operating system providers to launch installed websites using the same browser that initiated the installation.
 For example, if the user asks their browser to keep them logged in across the installation operation, that’s only possible if the installed site launches in the original browser.
 The user had their own reasons to choose a particular user agent to perform the installation, and we expect that choice to be respected across launches.</p>
+   <h3 class="heading settled" data-level="3.3" id="no-capability-gating"><span class="secno">3.3. </span><span class="content">No Capability Gating</span><a class="self-link" href="#no-capability-gating"></a></h3>
+   <p>Nearly all web features that are available to installed websites should also be usable by websites that haven’t been installed.</p>
+   <p>The exceptions are features that</p>
+   <ol>
+    <li data-md>
+     <p>control part of the launcher surface to which the website is installed or</p>
+    <li data-md>
+     <p>add an option somewhere else in the operating system.</p>
+   </ol>
+   <p>Even the second should only motivate exceptions when there’s no other clear way for users to manage that option beyond uninstalling the website.</p>
+   <aside class="example" id="badging-api-example"><a class="self-link" href="#badging-api-example"></a>
+The Badging API (see <a data-link-type="biblio" href="#biblio-badging" title="Badging API">[BADGING]</a>) is exceptional because it adds a badge to the application’s icon and therefore requires an icon to be present (first exception).
+</aside>
+   <aside class="example" id="push-api-example"><a class="self-link" href="#push-api-example"></a>
+The Push API (see <a data-link-type="biblio" href="#biblio-push-api" title="Push API">[PUSH-API]</a>) is exceptional because some operating systems might register applications allowed to send push notifications in a central surface (second exception).
+However, it might be just as easy to revoke the permission for push notifications from that surface as to uninstall the website.
+</aside>
    <h2 class="heading settled" data-level="4" id="programmatic-install-apis"><span class="secno">4. </span><span class="content">The role of programmatic install APIs</span><a class="self-link" href="#programmatic-install-apis"></a></h2>
    <p>Users often do not know that their browser can install websites, and browsers often do not know the appropriate time to inform them (see <a data-link-type="biblio" href="#biblio-chrome-install-telemetry" title="Comment on the WebKit standards position for BeforeInstallPromptEvent: usage of installed PWAs and click-through rate of Chrome&apos;s install UI">[CHROME-INSTALL-TELEMETRY]</a>).
 Websites have more information about whether visitors are likely to want to install the site and when a good time is to educate those visitors.
@@ -557,8 +575,12 @@ Providing such an API does not relieve a user agent from following the expectati
   <dl>
    <dt id="biblio-appmanifest">[APPMANIFEST]
    <dd>Marcos Caceres; Daniel Murphy; Christian Liebel. <a href="https://w3c.github.io/manifest/"><cite>Web Application Manifest</cite></a>. URL: <a href="https://w3c.github.io/manifest/">https://w3c.github.io/manifest/</a>
+   <dt id="biblio-badging">[BADGING]
+   <dd>Jay Harris; Marcos Caceres. <a href="https://w3c.github.io/badging/"><cite>Badging API</cite></a>. URL: <a href="https://w3c.github.io/badging/">https://w3c.github.io/badging/</a>
    <dt id="biblio-chrome-install-telemetry">[CHROME-INSTALL-TELEMETRY]
    <dd>Daniel Murphy. <a href="https://github.com/WebKit/standards-positions/issues/619#issuecomment-5625310796"><cite>Comment on the WebKit standards position for BeforeInstallPromptEvent: usage of installed PWAs and click-through rate of Chrome's install UI</cite></a>. 10 September 2026. URL: <a href="https://github.com/WebKit/standards-positions/issues/619#issuecomment-5625310796">https://github.com/WebKit/standards-positions/issues/619#issuecomment-5625310796</a>
    <dt id="biblio-manifest-incubations">[MANIFEST-INCUBATIONS]
    <dd><a href="https://wicg.github.io/manifest-incubations/"><cite>Manifest Incubations</cite></a>. Draft Community Group Report. URL: <a href="https://wicg.github.io/manifest-incubations/">https://wicg.github.io/manifest-incubations/</a>
+   <dt id="biblio-push-api">[PUSH-API]
+   <dd>Marcos Caceres; Kagami Rosylight. <a href="https://w3c.github.io/push-api/"><cite>Push API</cite></a>. URL: <a href="https://w3c.github.io/push-api/">https://w3c.github.io/push-api/</a>
   </dl>

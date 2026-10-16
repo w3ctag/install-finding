@@ -8,7 +8,7 @@
   <meta content="Bikeshed version 49e9fdd4f, updated Tue Oct 13 14:27:53 2026 -0700" name="generator">
   <link href="https://w3ctag.github.io/install-finding/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="f5b7799d8f817d6c9808eacd95735ab4d78fe8e2" name="revision">
+  <meta content="739b4b6619f87721e3e70901115a13a6d43d6e90" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -552,7 +552,7 @@ However, it might be just as easy to revoke the permission for push notification
 </aside>
    <h2 class="heading settled" data-level="4" id="programmatic-install-apis"><span class="secno">4. </span><span class="content">The role of programmatic install APIs</span><a class="self-link" href="#programmatic-install-apis"></a></h2>
    <p>Users often do not know that their browser can install websites, and browsers often do not know the appropriate time to inform them (see <a data-link-type="biblio" href="#biblio-chrome-install-telemetry" title="Comment on the WebKit standards position for BeforeInstallPromptEvent: usage of installed PWAs and click-through rate of Chrome&apos;s install UI">[CHROME-INSTALL-TELEMETRY]</a>).
-Websites have more information about whether visitors are likely to want to install the site and when a good time is to educate those visitors (see <a data-link-type="biblio" href="#biblio-chrome-android-install-funnel" title="Chrome on Android Web App Install Flow data">[CHROME-ANDROID-INSTALL-FUNNEL]</a>).
+Websites have more information about whether visitors are likely to want to install the site and when a good time is to educate those visitors.
 However, websites also have incentives to nag users.</p>
    <p>Website authors repeatedly ask for an API that lets them trigger the browser’s install flow themselves.
 Chromium-based browsers have exposed such an API since 2015, the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/beforeinstallprompt_event"><code>beforeinstallprompt</code></a> event (see <a data-link-type="biblio" href="#biblio-manifest-incubations" title="Manifest Incubations">[MANIFEST-INCUBATIONS]</a>).
@@ -577,8 +577,6 @@ Providing such an API does not relieve a user agent from following the expectati
    <dd>Marcos Caceres; Daniel Murphy; Christian Liebel. <a href="https://w3c.github.io/manifest/"><cite>Web Application Manifest</cite></a>. URL: <a href="https://w3c.github.io/manifest/">https://w3c.github.io/manifest/</a>
    <dt id="biblio-badging">[BADGING]
    <dd>Jay Harris; Marcos Caceres. <a href="https://w3c.github.io/badging/"><cite>Badging API</cite></a>. URL: <a href="https://w3c.github.io/badging/">https://w3c.github.io/badging/</a>
-   <dt id="biblio-chrome-android-install-funnel">[CHROME-ANDROID-INSTALL-FUNNEL]
-   <dd>Vincent Scheib. <a href="https://github.com/w3ctag/install-finding/issues/6"><cite>Chrome on Android Web App Install Flow data</cite></a>. 15 October 2026. URL: <a href="https://github.com/w3ctag/install-finding/issues/6">https://github.com/w3ctag/install-finding/issues/6</a>
    <dt id="biblio-chrome-install-telemetry">[CHROME-INSTALL-TELEMETRY]
    <dd>Daniel Murphy. <a href="https://github.com/WebKit/standards-positions/issues/619#issuecomment-5625310796"><cite>Comment on the WebKit standards position for BeforeInstallPromptEvent: usage of installed PWAs and click-through rate of Chrome's install UI</cite></a>. 10 September 2026. URL: <a href="https://github.com/WebKit/standards-positions/issues/619#issuecomment-5625310796">https://github.com/WebKit/standards-positions/issues/619#issuecomment-5625310796</a>
    <dt id="biblio-manifest-incubations">[MANIFEST-INCUBATIONS]

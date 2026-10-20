@@ -7,7 +7,7 @@ Group: TAG
 ED: https://w3ctag.github.io/install-finding/
 Repository: w3ctag/install-finding
 Editor: Christian Liebel, Thinktecture AG https://thinktecture.com, christian.liebel@thinktecture.com, https://christianliebel.com
-Abstract: Website installation has long become a core part of the web. We expect user agents and operating system providers to make installing websites as easy as possible.
+Abstract: Website installation has long become a core part of the web. We strongly encourage user agents and operating system providers to make installing websites as easy as possible.
 Complain About: accidental-2119 yes, missing-example-ids yes
 Assume Explicit For: on
 Die On: lint
@@ -69,22 +69,22 @@ The Web Application Manifest (see [[APPMANIFEST]]), developed since 2013, allows
 Installed websites fulfill a user need that otherwise can only be addressed by native apps: a persistent presence on the device, and launching from the same place as other applications.
 Unlike native apps, they do so while staying within the web's security and privacy model, including its permission model and sandbox.
 
-Given well over a decade of implementation experience and standardization, we declare the installation of websites a core capability of general-purpose browsers, and we expect them to offer it.
+Given well over a decade of implementation experience and standardization, we declare the installation of websites a core capability of general-purpose browsers, and we strongly encourage them to offer it.
 
-NOTE: This expectation does not extend to specialized user agents, such as text-mode browsers, kiosks, or web views embedded in applications, although they can still choose to offer installation.
+NOTE: We do not have a position on installation from specialized user agents, such as text-mode browsers, kiosks, or web views embedded in applications, although they can still choose to offer installation.
 
 
-Expectations on user agent and operating system providers {#expectations-on-providers}
+Recommendations for user agent and operating system providers {#expectations-on-providers}
 ======================================================================================
 
-In this section, we set out our expectations on user agent and operating system vendors.
+In this section, we set out our recommendations for user agent and operating system vendors.
 
 ## Obvious Install UI ## {#obvious-install-ui}
 
-We expect user agents to make installation an obvious affordance to users.
-Specifically, we expect the install option to clearly name the action, and to be easily reachable from the browser's UI.
-An entry inside a menu with an unrelated label (such as <samp>Share</samp>), or several menu layers deep, does not meet this expectation.
-We also expect users to be informed about what happens when they decide to install a website.
+We encourage user agents to make installation an obvious affordance to users.
+Specifically, we encourage the install option to clearly name the action, and to be easily reachable from the browser's UI.
+An entry inside a menu with an unrelated label (such as <samp>Share</samp>), or several menu layers deep, is not sufficient.
+We also encourage user agents to inform their users about what happens when they decide to install a website.
 The exact UI is left to user agents.
 
 A stable and obvious affordance also benefits website authors.
@@ -92,12 +92,12 @@ They have repeatedly reported that updating their install instructions after a n
 
 ## Engine Fairness ## {#engine-fairness}
 
-We expect operating system providers to give all user agents the same opportunity to install websites to the home screen, taskbar, dock, or launcher.
-Specifically, we expect third-party browsers to have access to the same install mechanisms as the platform's default browser.
+We encourage operating system providers to give all user agents the same opportunity to install websites to the home screen, taskbar, dock, or launcher.
+Specifically, we encourage third-party browsers to have access to the same install mechanisms as the platform's default browser.
 
-Additionally, we expect operating system providers to launch installed websites using the same browser that initiated the installation.
+Additionally, we encourage operating system providers to launch installed websites using the same browser that initiated the installation.
 For example, if the user asks their browser to keep them logged in across the installation operation, that's only possible if the installed site launches in the original browser.
-The user had their own reasons to choose a particular user agent to perform the installation, and we expect that choice to be respected across launches.
+The user had their own reasons to choose a particular user agent to perform the installation, and we encourage that choice to be respected across launches.
 
 ## No Capability Gating ## {#no-capability-gating}
 
@@ -134,4 +134,4 @@ What remains is a browser-sent event that provides a handle to trigger the insta
 
 The TAG has reviewed several proposals for new programmatic install APIs, both [same-origin](https://github.com/w3ctag/design-reviews/issues/888) and [cross-origin](https://github.com/w3ctag/design-reviews/issues/946), most recently the [manifest-first Web Install API](https://github.com/w3ctag/design-reviews/issues/1245).
 We [encourage vendors](https://github.com/w3ctag/design-reviews/issues/888#issuecomment-2316801231) to explore same-origin programmatic install APIs, as long as they trigger the user agent's own install flow, with the user agent retaining control over timing, eligibility, and abuse mitigation.
-Providing such an API does not relieve a user agent from following the expectations in [[#obvious-install-ui]].
+We still encourage a user agent to follow the recommendations in [[#obvious-install-ui]] even if it provides such an API.

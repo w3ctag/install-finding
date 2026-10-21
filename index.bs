@@ -74,8 +74,8 @@ Given well over a decade of implementation experience and standardization, we de
 NOTE: We do not have a position on installation from specialized user agents, such as text-mode browsers, kiosks, or web views embedded in applications, although they can still choose to offer installation.
 
 
-Recommendations for user agent and operating system providers {#expectations-on-providers}
-======================================================================================
+Recommendations for user agent and operating system providers {#recommendations-for-providers}
+==============================================================================================
 
 In this section, we set out our recommendations for user agent and operating system vendors.
 

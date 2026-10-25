@@ -64,7 +64,7 @@ Installation is a core capability of browsers {#core-part-of-browsers}
 
 Installable websites date back to at least 2008 (see [[INSTALLABLE-WEBAPPS#introduction]]).
 By now, the installation of websites is possible on all relevant engines and operating systems.
-The Web Application Manifest (see [[APPMANIFEST]]), developed since 2013, allows website authors to specify metadata for installable web applications.
+The [[APPMANIFEST inline]], developed since 2013, allows website authors to specify metadata for installable web applications.
 
 Installed websites fulfill a user need that otherwise can only be addressed by native apps: a persistent presence on the device, and launching from the same place as other applications.
 Unlike native apps, they do so while staying within the web's security and privacy model, including its permission model and sandbox.
@@ -72,6 +72,16 @@ Unlike native apps, they do so while staying within the web's security and priva
 Given well over a decade of implementation experience and standardization, we declare the installation of websites a core capability of general-purpose browsers, and we expect them to offer it.
 
 NOTE: This expectation does not extend to specialized user agents, such as text-mode browsers, kiosks, or web views embedded in applications, although they can still choose to offer installation.
+
+
+All websites should be installable {#all-websites-should-be-installable}
+========================================================================
+
+The TAG believes that all websites should be easily installable, in an interoperable way across all browsers.
+
+The [[APPMANIFEST inline]] currently only defines installation for websites that provide one.
+Installation of websites without a manifest is possible in all major browsers, but is not fully specified, so the result might differ between browsers.
+We encourage the web community to specify this case.
 
 
 Expectations on user agent and operating system providers {#expectations-on-providers}

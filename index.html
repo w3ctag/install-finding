@@ -8,7 +8,7 @@
   <meta content="Bikeshed version 49e9fdd4f, updated Tue Oct 13 14:27:53 2026 -0700" name="generator">
   <link href="https://w3ctag.github.io/install-finding/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="2ff0f83e3b8a4f593855ed978de69bb42452c585" name="revision">
+  <meta content="c2130af232de36942c1a19915fde57295c34b1e5" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -482,14 +482,15 @@ dfn > a.self-link::before      { content: "#"; }
    <ol class="toc">
     <li><a href="#intro"><span class="secno">1</span> <span class="content">Introduction</span></a>
     <li><a href="#core-part-of-browsers"><span class="secno">2</span> <span class="content">Installation is a core capability of browsers</span></a>
+    <li><a href="#all-websites-should-be-installable"><span class="secno">3</span> <span class="content">All websites should be installable</span></a>
     <li>
-     <a href="#recommendations-for-providers"><span class="secno">3</span> <span class="content">Recommendations for user agent and operating system providers</span></a>
+     <a href="#recommendations-for-providers"><span class="secno">4</span> <span class="content">Recommendations for user agent and operating system providers</span></a>
      <ol class="toc">
-      <li><a href="#obvious-install-ui"><span class="secno">3.1</span> <span class="content">Obvious Install UI</span></a>
-      <li><a href="#engine-fairness"><span class="secno">3.2</span> <span class="content">Engine Fairness</span></a>
-      <li><a href="#no-capability-gating"><span class="secno">3.3</span> <span class="content">No Capability Gating</span></a>
+      <li><a href="#obvious-install-ui"><span class="secno">4.1</span> <span class="content">Obvious Install UI</span></a>
+      <li><a href="#engine-fairness"><span class="secno">4.2</span> <span class="content">Engine Fairness</span></a>
+      <li><a href="#no-capability-gating"><span class="secno">4.3</span> <span class="content">No Capability Gating</span></a>
      </ol>
-    <li><a href="#programmatic-install-apis"><span class="secno">4</span> <span class="content">The role of programmatic install APIs</span></a>
+    <li><a href="#programmatic-install-apis"><span class="secno">5</span> <span class="content">The role of programmatic install APIs</span></a>
     <li>
      <a href="#references"><span class="secno"></span> <span class="content">References</span></a>
      <ol class="toc">
@@ -512,14 +513,19 @@ This topic might be revisited in a future version of this finding.</p>
    <h2 class="heading settled" data-level="2" id="core-part-of-browsers"><span class="secno">2. </span><span class="content">Installation is a core capability of browsers</span><a class="self-link" href="#core-part-of-browsers"></a></h2>
    <p>Installable websites date back to at least 2008 (see <a href="https://w3c-webmob.github.io/installable-webapps/#introduction">Use Cases and Requirements for Installable Web Apps § introduction</a>).
 By now, the installation of websites is possible on all relevant engines and operating systems.
-The Web Application Manifest (see <a data-link-type="biblio" href="#biblio-appmanifest" title="Web Application Manifest">[APPMANIFEST]</a>), developed since 2013, allows website authors to specify metadata for installable web applications.</p>
+The <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c.github.io/manifest/"><cite>Web Application Manifest</cite></a>, developed since 2013, allows website authors to specify metadata for installable web applications.</p>
    <p>Installed websites fulfill a user need that otherwise can only be addressed by native apps: a persistent presence on the device, and launching from the same place as other applications.
 Unlike native apps, they do so while staying within the web’s security and privacy model, including its permission model and sandbox.</p>
    <p>Given well over a decade of implementation experience and standardization, we declare the installation of websites a core capability of general-purpose browsers, and we strongly encourage them to offer it.</p>
    <p class="note" role="note"><span class="marker">NOTE:</span> We do not have a position on installation from specialized user agents, such as text-mode browsers, kiosks, or web views embedded in applications, although they can still choose to offer installation.</p>
-   <h2 class="heading settled" data-level="3" id="recommendations-for-providers"><span class="secno">3. </span><span class="content">Recommendations for user agent and operating system providers</span><a class="self-link" href="#recommendations-for-providers"></a></h2>
+   <h2 class="heading settled" data-level="3" id="all-websites-should-be-installable"><span class="secno">3. </span><span class="content">All websites should be installable</span><a class="self-link" href="#all-websites-should-be-installable"></a></h2>
+   <p>The TAG believes that all websites should be easily installable, in an interoperable way across all browsers.</p>
+   <p>The <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c.github.io/manifest/"><cite>Web Application Manifest</cite></a> currently only defines installation for websites that provide one.
+Installation of websites without a manifest is possible in all major browsers, but is not fully specified, so the result might differ between browsers.
+We encourage the web community to specify this case.</p>
+   <h2 class="heading settled" data-level="4" id="recommendations-for-providers"><span class="secno">4. </span><span class="content">Recommendations for user agent and operating system providers</span><a class="self-link" href="#recommendations-for-providers"></a></h2>
    <p>In this section, we set out our recommendations for user agent and operating system vendors.</p>
-   <h3 class="heading settled" data-level="3.1" id="obvious-install-ui"><span class="secno">3.1. </span><span class="content">Obvious Install UI</span><a class="self-link" href="#obvious-install-ui"></a></h3>
+   <h3 class="heading settled" data-level="4.1" id="obvious-install-ui"><span class="secno">4.1. </span><span class="content">Obvious Install UI</span><a class="self-link" href="#obvious-install-ui"></a></h3>
    <p>We encourage user agents to make installation an obvious affordance to users.
 Specifically, we encourage the install option to clearly name the action, and to be easily reachable from the browser’s UI.
 An entry inside a menu with an unrelated label (such as <samp>Share</samp>), or several menu layers deep, is not sufficient.
@@ -527,13 +533,13 @@ We also encourage user agents to inform their users about what happens when they
 The exact UI is left to user agents.</p>
    <p>A stable and obvious affordance also benefits website authors.
 They have repeatedly reported that updating their install instructions after a new browser or operating system release is tedious.</p>
-   <h3 class="heading settled" data-level="3.2" id="engine-fairness"><span class="secno">3.2. </span><span class="content">Engine Fairness</span><a class="self-link" href="#engine-fairness"></a></h3>
+   <h3 class="heading settled" data-level="4.2" id="engine-fairness"><span class="secno">4.2. </span><span class="content">Engine Fairness</span><a class="self-link" href="#engine-fairness"></a></h3>
    <p>We encourage operating system providers to give all user agents the same opportunity to install websites to the home screen, taskbar, dock, or launcher.
 Specifically, we encourage third-party browsers to have access to the same install mechanisms as the platform’s default browser.</p>
    <p>Additionally, we encourage operating system providers to launch installed websites using the same browser that initiated the installation.
 For example, if the user asks their browser to keep them logged in across the installation operation, that’s only possible if the installed site launches in the original browser.
 The user had their own reasons to choose a particular user agent to perform the installation, and we encourage that choice to be respected across launches.</p>
-   <h3 class="heading settled" data-level="3.3" id="no-capability-gating"><span class="secno">3.3. </span><span class="content">No Capability Gating</span><a class="self-link" href="#no-capability-gating"></a></h3>
+   <h3 class="heading settled" data-level="4.3" id="no-capability-gating"><span class="secno">4.3. </span><span class="content">No Capability Gating</span><a class="self-link" href="#no-capability-gating"></a></h3>
    <p>Nearly all web features that are available to installed websites should also be usable by websites that haven’t been installed.</p>
    <p>The exceptions are features that</p>
    <ol>
@@ -550,7 +556,7 @@ The Badging API (see <a data-link-type="biblio" href="#biblio-badging" title="Ba
 The Push API (see <a data-link-type="biblio" href="#biblio-push-api" title="Push API">[PUSH-API]</a>) is exceptional because some operating systems might register applications allowed to send push notifications in a central surface (second exception).
 However, it might be just as easy to revoke the permission for push notifications from that surface as to uninstall the website.
 </aside>
-   <h2 class="heading settled" data-level="4" id="programmatic-install-apis"><span class="secno">4. </span><span class="content">The role of programmatic install APIs</span><a class="self-link" href="#programmatic-install-apis"></a></h2>
+   <h2 class="heading settled" data-level="5" id="programmatic-install-apis"><span class="secno">5. </span><span class="content">The role of programmatic install APIs</span><a class="self-link" href="#programmatic-install-apis"></a></h2>
    <p>Users often do not know that their browser can install websites, and browsers often do not know the appropriate time to inform them (see <a data-link-type="biblio" href="#biblio-chrome-install-telemetry" title="Comment on the WebKit standards position for BeforeInstallPromptEvent: usage of installed PWAs and click-through rate of Chrome&apos;s install UI">[CHROME-INSTALL-TELEMETRY]</a>).
 Websites have more information about whether visitors are likely to want to install the site and when it might be an optimum time to educate those visitors (see <a data-link-type="biblio" href="#biblio-chrome-android-install-funnel" title="Chrome on Android Web App Install Flow data">[CHROME-ANDROID-INSTALL-FUNNEL]</a>).
 However, websites also have incentives to nag users.</p>
@@ -562,7 +568,7 @@ The Web Applications Working Group has consensus that installation should not de
 What remains is a browser-sent event that provides a handle to trigger the install prompt, which is a rather unusual design.</p>
    <p>The TAG has reviewed several proposals for new programmatic install APIs, both <a href="https://github.com/w3ctag/design-reviews/issues/888">same-origin</a> and <a href="https://github.com/w3ctag/design-reviews/issues/946">cross-origin</a>, most recently the <a href="https://github.com/w3ctag/design-reviews/issues/1245">manifest-first Web Install API</a>.
 We <a href="https://github.com/w3ctag/design-reviews/issues/888#issuecomment-2316801231">encourage vendors</a> to explore same-origin programmatic install APIs, as long as they trigger the user agent’s own install flow, with the user agent retaining control over timing, eligibility, and abuse mitigation.
-We still encourage a user agent to follow the recommendations in <a href="#obvious-install-ui">§ 3.1 Obvious Install UI</a> even if it provides such an API.</p>
+We still encourage a user agent to follow the recommendations in <a href="#obvious-install-ui">§ 4.1 Obvious Install UI</a> even if it provides such an API.</p>
   </main>
   <script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script>
   <h2 class="heading no-num no-ref settled" id="references"><span class="content">References</span><a class="self-link" href="#references"></a></h2>

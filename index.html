@@ -3,12 +3,12 @@
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
   <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
   <title>Installing Websites Must Be Easy</title>
-  <meta content="DRAFT-FINDING" name="w3c-status">
+  <meta content="FINDING" name="w3c-status">
   <link href="https://www.w3.org/StyleSheets/TR/2021/base.css" rel="stylesheet">
   <meta content="Bikeshed version 49e9fdd4f, updated Tue Oct 13 14:27:53 2026 -0700" name="generator">
-  <link href="https://w3ctag.github.io/install-finding/" rel="canonical">
+  <link href="https://www.w3.org/2001/tag/doc/install-finding/" rel="canonical">
   <link href="https://www.w3.org/2008/site/images/favicon.ico" rel="icon">
-  <meta content="eb9e1f9de15ce50f93e1303a01a792d90638552c" name="revision">
+  <meta content="e68204d651cf4c8bbf8853aa157c1b3f2e1eff9c" name="revision">
   <meta content="dark light" name="color-scheme">
   <link href="https://www.w3.org/StyleSheets/TR/2021/dark.css" media="(prefers-color-scheme: dark)" rel="stylesheet" type="text/css">
 <style>/* Boilerplate: style-autolinks */
@@ -423,7 +423,7 @@ dfn > a.self-link::before      { content: "#"; }
 </a>
 </p>
    <h1 class="no-ref p-name" id="title">Installing Websites Must Be Easy</h1>
-   <p id="w3c-state"><a href="https://tag.w3.org/findings/">Draft Finding of the TAG</a>,
+   <p id="w3c-state"><a href="https://tag.w3.org/findings/">Finding of the TAG</a>,
     <time class="dt-updated" datetime="2026-10-26">26 October 2026</time></p>
    <details open>
     <summary>More details about this document</summary>
@@ -431,7 +431,11 @@ dfn > a.self-link::before      { content: "#"; }
      <dl>
       <dt>This version:
       <dd><a class="u-url" href="https://w3ctag.github.io/install-finding/">https://w3ctag.github.io/install-finding/</a>
-      <dt>Issue Tracking:
+      <dt>Latest published version:
+      <dd><a href="https://www.w3.org/2001/tag/doc/install-finding/">https://www.w3.org/2001/tag/doc/install-finding/</a>
+      <dt>Editor's Draft:
+      <dd><a href="https://w3ctag.github.io/install-finding/">https://w3ctag.github.io/install-finding/</a>
+      <dt>Feedback:
       <dd><a href="https://github.com/w3ctag/install-finding/issues/">GitHub</a>
       <dt class="editor">Editor:
       <dd class="editor h-card p-author vcard"><a class="fn p-name u-url url" href="https://christianliebel.com">Christian Liebel</a> (<a class="org p-org" href="https://thinktecture.com">Thinktecture AG</a>) <a class="email u-email" href="mailto:christian.liebel@thinktecture.com">christian.liebel@thinktecture.com</a>
@@ -458,12 +462,9 @@ dfn > a.self-link::before      { content: "#"; }
   </p>
    <p>
     This document was published by the <a href="https://www.w3.org/2001/tag/">W3C Technical Architecture Group
-    (TAG)</a> as a Draft Finding of the TAG.
-    Publication as a Draft Finding of the TAG does not imply endorsement by
-    <abbr title="World Wide Web Consortium">W3C</abbr> and its Members. This is a
-    draft document and may be updated, replaced, or obsoleted by other documents
-    at any time. It is inappropriate to cite this document as other than work in
-    progress.
+    (TAG)</a> as a Finding of the TAG.
+    Publication as a Finding of the TAG does not imply endorsement by
+    <abbr title="World Wide Web Consortium">W3C</abbr> and its Members.
   </p>
    <p>
     Feedback and comments on this document are welcome. Please
@@ -513,20 +514,20 @@ This topic might be revisited in a future version of this finding.</p>
    <h2 class="heading settled" data-level="2" id="core-part-of-browsers"><span class="secno">2. </span><span class="content">Installation is a core capability of browsers</span><a class="self-link" href="#core-part-of-browsers"></a></h2>
    <p>Installable websites date back to at least 2008 (see <a href="https://w3c-webmob.github.io/installable-webapps/#introduction">Use Cases and Requirements for Installable Web Apps § introduction</a>).
 By now, the installation of websites is possible on all relevant engines and operating systems.
-The <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c.github.io/manifest/"><cite>Web Application Manifest</cite></a>, developed since 2013, allows website authors to specify metadata for installable web applications.</p>
+The <a data-biblio-display="inline" data-link-type="biblio" href="https://www.w3.org/TR/appmanifest/"><cite>Web Application Manifest</cite></a>, developed since 2013, allows website authors to specify metadata for installable web applications.</p>
    <p>Installed websites fulfill a user need that otherwise can only be addressed by native apps: a persistent presence on the device, and launching from the same place as other applications.
 Unlike native apps, they do so while staying within the web’s security and privacy model, including its permission model and sandbox.</p>
    <p>Given well over a decade of implementation experience and standardization, we declare the installation of websites a core capability of general-purpose browsers, and we strongly encourage them to offer it.</p>
    <p class="note" role="note"><span class="marker">NOTE:</span> We do not have a position on installation from specialized user agents, such as text-mode browsers, kiosks, or web views embedded in applications, although they can still choose to offer installation.</p>
    <h2 class="heading settled" data-level="3" id="all-websites-should-be-installable"><span class="secno">3. </span><span class="content">All websites should be installable</span><a class="self-link" href="#all-websites-should-be-installable"></a></h2>
    <p>The TAG believes that all websites should be easily installable, in an interoperable way across all browsers.</p>
-   <p>The <a data-biblio-display="inline" data-link-type="biblio" href="https://w3c.github.io/manifest/"><cite>Web Application Manifest</cite></a> currently only defines installation for websites that provide one.
+   <p>The <a data-biblio-display="inline" data-link-type="biblio" href="https://www.w3.org/TR/appmanifest/"><cite>Web Application Manifest</cite></a> currently only defines installation for websites that provide one.
 Installation of websites without a manifest is possible in all major browsers, but is not fully specified, so the result might differ between browsers.
 We encourage the web community to specify this case.</p>
    <h2 class="heading settled" data-level="4" id="recommendations-for-providers"><span class="secno">4. </span><span class="content">Recommendations for user agent and operating system providers</span><a class="self-link" href="#recommendations-for-providers"></a></h2>
    <p>In this section, we set out our recommendations for user agent and operating system vendors.</p>
    <h3 class="heading settled" data-level="4.1" id="obvious-install-ui"><span class="secno">4.1. </span><span class="content">Obvious Install UI</span><a class="self-link" href="#obvious-install-ui"></a></h3>
-   <p>We encourage <a data-biblio-display="inline" data-link-type="biblio" href="https://w3ctag.github.io/user-agents"><cite>User Agents</cite></a> to make installation an obvious affordance to users.
+   <p>We encourage <a data-biblio-display="inline" data-link-type="biblio" href="https://www.w3.org/TR/user-agents/"><cite>User Agents</cite></a> to make installation an obvious affordance to users.
 Specifically, we encourage the install option to clearly name the action, and to be easily reachable from the browser’s UI.
 An entry inside a menu with an unrelated label (such as <samp>Share</samp>), or several menu layers deep, is not sufficient.
 We also encourage user agents to inform their users about what happens when they decide to install a website.
@@ -577,14 +578,14 @@ We still encourage a user agent to follow the recommendations in <a href="#obvio
    <dt id="biblio-installable-webapps">[INSTALLABLE-WEBAPPS]
    <dd>Marcos Cáceres; Ernesto Jiménez. <a href="https://w3c-webmob.github.io/installable-webapps/"><cite>Use Cases and Requirements for Installable Web Apps</cite></a>. 10 November 2016. Unofficial Draft. URL: <a href="https://w3c-webmob.github.io/installable-webapps/">https://w3c-webmob.github.io/installable-webapps/</a>
    <dt id="biblio-user-agents">[USER-AGENTS]
-   <dd>Sarven Capadisli; Jeffrey Yasskin. <a href="https://w3ctag.github.io/user-agents"><cite>User Agents</cite></a>. URL: <a href="https://w3ctag.github.io/user-agents">https://w3ctag.github.io/user-agents</a>
+   <dd>Sarven Capadisli; Jeffrey Yasskin. <a href="https://www.w3.org/TR/user-agents/"><cite>User Agents</cite></a>. 22 October 2026. NOTE. URL: <a href="https://www.w3.org/TR/user-agents/">https://www.w3.org/TR/user-agents/</a>
   </dl>
   <h3 class="heading no-num no-ref settled" id="informative"><span class="content">Non-Normative References</span><a class="self-link" href="#informative"></a></h3>
   <dl>
    <dt id="biblio-appmanifest">[APPMANIFEST]
-   <dd>Marcos Caceres; Daniel Murphy; Christian Liebel. <a href="https://w3c.github.io/manifest/"><cite>Web Application Manifest</cite></a>. URL: <a href="https://w3c.github.io/manifest/">https://w3c.github.io/manifest/</a>
+   <dd>Marcos Caceres; Daniel Murphy; Christian Liebel. <a href="https://www.w3.org/TR/appmanifest/"><cite>Web Application Manifest</cite></a>. 16 October 2026. WD. URL: <a href="https://www.w3.org/TR/appmanifest/">https://www.w3.org/TR/appmanifest/</a>
    <dt id="biblio-badging">[BADGING]
-   <dd>Jay Harris; Marcos Caceres. <a href="https://w3c.github.io/badging/"><cite>Badging API</cite></a>. URL: <a href="https://w3c.github.io/badging/">https://w3c.github.io/badging/</a>
+   <dd>Jay Harris; Marcos Caceres. <a href="https://www.w3.org/TR/badging/"><cite>Badging API</cite></a>. 27 April 2026. WD. URL: <a href="https://www.w3.org/TR/badging/">https://www.w3.org/TR/badging/</a>
    <dt id="biblio-chrome-android-install-funnel">[CHROME-ANDROID-INSTALL-FUNNEL]
    <dd>Vincent Scheib. <a href="https://github.com/w3ctag/install-finding/issues/6"><cite>Chrome on Android Web App Install Flow data</cite></a>. 15 October 2026. URL: <a href="https://github.com/w3ctag/install-finding/issues/6">https://github.com/w3ctag/install-finding/issues/6</a>
    <dt id="biblio-chrome-install-telemetry">[CHROME-INSTALL-TELEMETRY]
@@ -592,5 +593,5 @@ We still encourage a user agent to follow the recommendations in <a href="#obvio
    <dt id="biblio-manifest-incubations">[MANIFEST-INCUBATIONS]
    <dd><a href="https://wicg.github.io/manifest-incubations/"><cite>Manifest Incubations</cite></a>. Draft Community Group Report. URL: <a href="https://wicg.github.io/manifest-incubations/">https://wicg.github.io/manifest-incubations/</a>
    <dt id="biblio-push-api">[PUSH-API]
-   <dd>Marcos Caceres; Kagami Rosylight. <a href="https://w3c.github.io/push-api/"><cite>Push API</cite></a>. URL: <a href="https://w3c.github.io/push-api/">https://w3c.github.io/push-api/</a>
+   <dd>Marcos Caceres; Kagami Rosylight. <a href="https://www.w3.org/TR/push-api/"><cite>Push API</cite></a>. 5 October 2026. WD. URL: <a href="https://www.w3.org/TR/push-api/">https://www.w3.org/TR/push-api/</a>
   </dl>

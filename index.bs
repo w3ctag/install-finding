@@ -2,9 +2,10 @@
 Title: Installing Websites Must Be Easy
 Shortname: install-finding
 Level: None
-Status: DRAFT-FINDING
+Status: FINDING
 Group: TAG
 ED: https://w3ctag.github.io/install-finding/
+TR: https://www.w3.org/2001/tag/doc/install-finding/
 Repository: w3ctag/install-finding
 Editor: Christian Liebel, Thinktecture AG https://thinktecture.com, christian.liebel@thinktecture.com, https://christianliebel.com
 Abstract: Website installation has long become a core part of the web. We strongly encourage user agents and operating system providers to make installing websites as easy as possible.
